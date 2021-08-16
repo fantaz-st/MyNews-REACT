@@ -1,0 +1,15 @@
+.main_articles {
+  width: 615px;
+}
+.main_four {
+  margin-bottom: 15px;
+}
+.main_four {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 15px;
+}

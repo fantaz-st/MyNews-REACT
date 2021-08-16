@@ -1,0 +1,40 @@
+.category_btns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 6px;
+}
+.category_btns .btn-category {
+  height: 70px;
+  width: 70px;
+  border: none;
+  background-color: transparent;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 6px;
+  color: #888989;
+}
+.category_btns .btn-category.active {
+  color: #b31a17;
+  background-color: #ffffff;
+  box-shadow: rgba(35, 55, 80, 0.1) 0px 2px 6px;
+}
+
+.category_btns .btn-category:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.category_btns .btn-category i {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .category_btns {
+    display: none;
+  }
+}

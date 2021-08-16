@@ -1,0 +1,61 @@
+.article {
+  margin: 0px;
+
+  overflow: hidden;
+  width: 300px;
+  transition: 0.2s ease-in-out;
+  position: relative;
+}
+
+.article-a {
+  text-decoration: none;
+}
+.article:hover {
+  transform: scale(1.01);
+}
+.article .banner-small {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.article .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  height: 60px;
+}
+
+.article .category {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0;
+  color: #3272bd;
+  text-transform: uppercase;
+}
+.article .title {
+  margin: 5px 0 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.article .author {
+  font-size: 12px;
+  color: #000000;
+}
+
+.article .favorite {
+  font-size: 20px;
+  color: #b31a17;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .article {
+    width: 100%;
+  }
+}

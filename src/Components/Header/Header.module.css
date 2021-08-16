@@ -1,0 +1,57 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  max-width: 1200px;
+  height: 60px;
+  background-color: #b31a17;
+  margin: 0 auto;
+}
+.banner .text {
+  display: flex;
+  gap: 45px;
+}
+
+.banner .title {
+  color: #ffffff;
+
+  text-decoration: none;
+  font-weight: 500;
+}
+.banner .sub-title {
+  color: #ffffff;
+
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.banner .buttons .button-no-thanks,
+.banner .buttons .button-get {
+  border-color: transparent;
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.banner .buttons .button-no-thanks {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.banner .buttons .button-get {
+  color: #000000;
+  background-color: #ffffff;
+}
+.banner .buttons .button-get:hover {
+  box-shadow: rgba(35, 55, 80, 0.3) 0px 6px 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    display: none;
+  }
+}

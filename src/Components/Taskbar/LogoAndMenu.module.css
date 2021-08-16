@@ -1,0 +1,193 @@
+.taskbar {
+  width: 1020px;
+  gap: 45px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  border-bottom: 1px solid #eaebed;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.taskbar .logo .text {
+  font-size: 30px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.taskbar .logo .text span {
+  color: #b31a17;
+}
+
+.taskbar .logo .text:visited {
+  color: #000000;
+}
+.taskbar .search_bar {
+  background-color: #ffffff;
+  padding: 4px;
+  border-radius: 8px;
+  width: 75%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+}
+
+.taskbar .search_bar .magnifier {
+  height: 20px;
+  margin: 0 15px;
+}
+.taskbar .search_bar .search__field {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  color: #a5a5a4;
+}
+
+.taskbar .search_bar .search__field:focus {
+  outline: none;
+}
+
+.taskbar .search_bar .btn-search {
+  height: 100%;
+  padding: 0 16px;
+  color: #ffffff;
+  font-weight: 500;
+  background-color: #b31a17;
+  border: none;
+  border-radius: 6px;
+}
+.taskbar .upper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.nav-btns {
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+.nav-menu-btn {
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 18px;
+  border: none;
+}
+.nav-menu-btn.active {
+  background-color: rgba(179, 26, 23, 0.2);
+  color: #b31a17;
+}
+
+.menu_checkbox {
+  display: none;
+}
+
+.hamburger-label {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.hamburger-label .slice {
+  position: relative;
+  top: 0;
+  height: 6px;
+  background-color: #000000;
+  margin-bottom: 6px;
+  transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+  border-radius: 2px;
+}
+
+.hamburger-label .slice:first-child {
+  transform-origin: 0;
+}
+
+.hamburger-label .slice:last-child {
+  margin-bottom: 0;
+  transform-origin: 36px;
+}
+
+.hamburger-label .slice:nth-child(2) {
+  right: 0;
+  width: 30px;
+}
+
+.menu_checkbox {
+  display: none;
+}
+
+.menu_checkbox:checked + .hamburger-label .slice:first-child {
+  top: -6px;
+  transform: rotateZ(45deg);
+}
+
+.menu_checkbox:checked + .hamburger-label .slice:last-child {
+  top: 6px;
+  transform: rotateZ(45deg);
+}
+
+.menu_checkbox:checked + .hamburger-label .slice:nth-child(2) {
+  width: 45px;
+  top: -2px;
+  right: 7px;
+  transform: rotateZ(-45deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .taskbar {
+    flex-direction: column;
+  }
+  .taskbar {
+    width: 90%;
+    height: auto;
+    align-items: flex-start;
+    margin: 15px auto;
+  }
+  .taskbar .upper {
+    width: 100%;
+  }
+
+  .taskbar .search_bar {
+    width: 90%;
+    padding: 0 15px;
+  }
+
+  .taskbar .search_bar {
+    height: 60px;
+  }
+  .taskbar .search_bar .search__field {
+    padding: 12px;
+    font-size: 18px;
+  }
+  .taskbar .btn-search {
+    display: none;
+  }
+
+  .hamburger-label {
+    display: block !important;
+  }
+  .nav-btns {
+    display: flex;
+  }
+}

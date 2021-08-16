@@ -1,0 +1,28 @@
+.nav-btns {
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+.nav-menu-btn {
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 18px;
+  border: none;
+}
+.nav-menu-btn.active {
+  background-color: rgba(179, 26, 23, 0.2);
+  color: #b31a17;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-btns {
+    display: flex;
+  }
+}

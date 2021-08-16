@@ -1,0 +1,10 @@
+.rest_articles {
+  display: flex;
+  width: auto;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 15px;
+}
