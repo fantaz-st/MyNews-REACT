@@ -10,7 +10,7 @@ Both the featured news and latest news use the "general" category as it provides
 ## Functionality
 
 The news are received from the api and loaded to the latest and featured news. Categories can be changed by pressing the according button.
-Articles can be searched from the search input. Articles can be added to favorites by pressing the heart button in article's top right corner and viewed when "Favorites" button is pressed.
+Articles can be searched from the search input. Latest articles can be scrolled down to trigger a "load more" function which does infinite loading. Articles can be added to favorites by pressing the heart button in article's top right corner and viewed when "Favorites" button is pressed.
 
 ## Method
 
