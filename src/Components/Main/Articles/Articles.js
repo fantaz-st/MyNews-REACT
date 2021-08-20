@@ -26,9 +26,9 @@ const Articles = () => {
 
   //determine if we're on a mobile device, lol
   const [width, setWidth] = useState(window.innerWidth);
-  const handleWindowSizeChange = () => setWidth(window.innerWidth);
 
   useEffect(() => {
+    const handleWindowSizeChange = () => setWidth(window.innerWidth);
     window.addEventListener('resize', handleWindowSizeChange);
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
