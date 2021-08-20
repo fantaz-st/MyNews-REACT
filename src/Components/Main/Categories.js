@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import classes from './Categories.module.css';
 
-import AllContext from '../Context/all-context';
+import ArticleContext from '../Context/article-context';
 
 const categoryList = [
   { name: 'home', icon: 'fas fa-home', value: 'general' },
@@ -13,7 +13,7 @@ const categoryList = [
 ];
 
 const Categories = () => {
-  const ctx = useContext(AllContext);
+  const ctx = useContext(ArticleContext);
 
   const onCategoryChange = e => {
     ctx.changeCategory(e.currentTarget.dataset.value);

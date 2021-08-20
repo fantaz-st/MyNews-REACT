@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import Article from './Article';
-import AllContext from '../../Context/all-context';
+import ArticleContext from '../../Context/article-context';
 
 import classes from './RestArticles.module.css';
 
 const RestArticles = () => {
-  const ctx = useContext(AllContext);
+  const ctx = useContext(ArticleContext);
 
   return (
     <div className={classes['rest_articles']}>

@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import classes from './Article.module.css';
-import AllContext from '../../Context/all-context';
+import ArticleContext from '../../Context/article-context';
 
 import defaultImagePlaceholder from './../../../assets/placeholder.jpg';
 
 const Article = props => {
-  const ctx = useContext(AllContext);
+  const ctx = useContext(ArticleContext);
 
   const handleAddToFavorite = e => {
     const parent = e.target.parentElement;

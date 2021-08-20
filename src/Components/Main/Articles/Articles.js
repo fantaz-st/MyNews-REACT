@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import AllContext from '../../Context/all-context';
+import ArticleContext from '../../Context/article-context';
 
 import classes from './Articles.module.css';
 import MobileNavigationButtons from './MobileNavigationButtons';
@@ -9,7 +9,7 @@ import LatestNews from './LatestNews';
 const Articles = () => {
   const [visibleArticles, setVisibleArticles] = useState('featured');
 
-  const ctx = useContext(AllContext);
+  const ctx = useContext(ArticleContext);
 
   const handleScroll = e => {
     const target = e.target;

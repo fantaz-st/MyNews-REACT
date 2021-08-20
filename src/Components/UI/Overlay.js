@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import classes from './Overlay.module.css';
-import AllContext from '../Context/all-context';
+import ArticleContext from '../Context/article-context';
 import magnifierIcon from './../../assets/magnifier.svg';
 
 const categoryList = [
@@ -13,7 +13,7 @@ const categoryList = [
 ];
 
 const Overlay = () => {
-  const ctx = useContext(AllContext);
+  const ctx = useContext(ArticleContext);
 
   const [searchTerm, setSeatchTerm] = useState('');
 

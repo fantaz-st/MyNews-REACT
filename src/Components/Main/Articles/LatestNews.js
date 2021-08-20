@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import LatestArticle from './LatestArticle';
 import LoadingMoreMessage from './LoadingMoreMessage';
-import AllContext from '../../Context/all-context';
+import ArticleContext from '../../Context/article-context';
 import classes from './LatestNews.module.css';
 
 const LatestNews = props => {
-  const ctx = useContext(AllContext);
+  const ctx = useContext(ArticleContext);
   return (
     <div className={classes['latest_news']} onScroll={props.onHandleScroll}>
       <h2 className={classes.header}>

@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import classes from './LogoAndMenu.module.css';
 import magnifierIcon from './../../assets/magnifier.svg';
-import AllContext from '../Context/all-context';
+import ArticleContext from '../Context/article-context';
 
-const LogoAndMenu = props => {
-  const ctx = useContext(AllContext);
+const LogoAndMenu = () => {
+  const ctx = useContext(ArticleContext);
 
   const [searchTerm, setSeatchTerm] = useState('');
 
