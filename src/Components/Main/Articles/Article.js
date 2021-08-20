@@ -8,18 +8,7 @@ const Article = props => {
   const ctx = useContext(ArticleContext);
 
   const handleAddToFavorite = e => {
-    const parent = e.target.parentElement;
-    const children = parent.children;
-
-    const articleObj = {
-      url: children[1].href,
-      urlToImage: children[1].children[0].src,
-      description: children[1].children[0].alt,
-      title: children[1].children[1].children[0].textContent,
-      author: children[1].children[1].children[1].textContent,
-    };
-
-    ctx.favoriteHandler(articleObj);
+    ctx.favoriteHandler(props);
   };
 
   return (

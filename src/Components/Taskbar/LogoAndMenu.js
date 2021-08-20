@@ -17,6 +17,7 @@ const LogoAndMenu = () => {
   const inputHandler = e => {
     setSeatchTerm(e.target.value);
   };
+
   const handleHamburgerMenuClick = () => {
     ctx.menuVisibility();
   };
@@ -35,6 +36,7 @@ const LogoAndMenu = () => {
           className={classes['menu_checkbox']}
           onClick={handleHamburgerMenuClick}
           checked={ctx.menuIsVisible}
+          onChange={() => console.log('menu changed')}
         />
         <label htmlFor="menu_checkbox" className={classes['hamburger-label']}>
           <div className={classes.slice}></div>

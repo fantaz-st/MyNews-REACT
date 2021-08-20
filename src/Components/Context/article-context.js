@@ -63,20 +63,8 @@ export const ArticleContextProvider = props => {
 
         const response = await fetch(`https://newsapi.org/v2/top-headlines?category=general&pageSize=20&page=${nextPage}&apiKey=${APIKEY}`);
         const data = await response.json();
-        const latestNews = [];
 
-        for (const key in data.articles) {
-          latestNews.push({
-            author: data.articles[key].author,
-            content: data.articles[key].content,
-            description: data.articles[key].description,
-            sourceName: data.articles[key].source.name,
-            url: data.articles[key].url,
-            urlToImage: data.articles[key].urlToImage,
-            title: data.articles[key].title,
-            publishedAt: data.articles[key].publishedAt,
-          });
-        }
+        const latestNews = data.articles.map(article => createArticleObject(article));
         dispatch({
           type: 'ADD_MORE_ARTICLES',
           payload: {
@@ -103,6 +91,17 @@ export const ArticleContextProvider = props => {
   const onChangeMenuVisibility = () => {
     setMenuVisibility(prevState => !prevState);
   };
+
+  //load favorites on INIT
+  useEffect(() => {
+    const storage = localStorage.getItem('favorites');
+    if (storage) {
+      dispatch({
+        type: 'LOAD_FROM_LS',
+        value: JSON.parse(storage),
+      });
+    }
+  }, []);
 
   //persist favorites in local storage when favorite is added to state.favorites
 
@@ -138,17 +137,6 @@ export const ArticleContextProvider = props => {
   useEffect(() => {
     getArticles();
   }, [getArticles]);
-
-  //load favorites on INIT
-  useEffect(() => {
-    const storage = localStorage.getItem('favorites');
-    if (storage) {
-      dispatch({
-        type: 'LOAD_FROM_LS',
-        value: JSON.parse(storage),
-      });
-    }
-  }, []);
 
   return (
     <ArticleContext.Provider
